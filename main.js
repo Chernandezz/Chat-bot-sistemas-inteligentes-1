@@ -43,3 +43,9 @@ $("#sendMessage").addEventListener("click", function () {
   chatBot(message);
   $("#message").value = "";
 });
+
+$("#message").addEventListener("keyup", function (event) {
+  if (event.key === "Enter") {
+    $("#sendMessage").click();
+  }
+});
