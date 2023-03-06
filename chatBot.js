@@ -16,6 +16,12 @@ let entradas = {
     "eres?",
     "eres",
   ],
+  expandirRepresentacionIaIn: [
+    "mas",
+    "expande tu respuesta",
+    "continua",
+    "mas?",
+  ],
   nombreIn: [
     "Cual es tu nombre",
     "cuál es tu nombre",
@@ -58,6 +64,17 @@ let entradas = {
     "terminator",
     "vas a destruir el planeta?",
   ],
+  representacionIaIn: [
+    "que es la inteligencia artificial?",
+    "que es la ia?",
+    "formas de representación de conocimiento en IA",
+    "formas de representación de conocimiento en inteligencia artificial",
+    "formas de representación de conocimiento en IA?",
+    "formas de representación de conocimiento en inteligencia artificial?",
+    "cuales son las formas de representación de conocimiento en inteligencia artificial?",
+    "formas de representación de la inteligencia artificial",
+    "formas de representación IA",
+  ],
   saludoIn: ["hola", "holita", "hello", "hi", "que hubo?"],
   estadoIn: [
     "como estas",
@@ -79,7 +96,6 @@ let entradas = {
     "q te gusta hacer",
     "q te gusta hacer?",
   ],
-  
 };
 
 // Salidas
@@ -89,6 +105,14 @@ let salidas = {
   materiaOut: [
     "Sistemas inteligentes computacionales, la mejor",
     "Inteligencia Artificial, la mejor",
+  ],
+  expandirRepresentacionIaOut: [
+    "Existen diversas formas de representación de conocimiento en IA, entre las que se incluyen:<br>Lógica: Es una forma de representación que utiliza reglas formales para representar el conocimiento y los hechos. La lógica proposicional y la lógica de primer orden son dos ejemplos de lógica utilizados en la representación de conocimiento en IA.<br>Redes Semánticas: Las redes semánticas son gráficos que representan el conocimiento en términos de objetos y relaciones entre ellos. Las redes semánticas son utilizadas a menudo en sistemas de procesamiento de lenguaje natural para representar el significado de las palabras.<br>Marcos: Los marcos son estructuras de datos que representan una situación o un concepto y sus atributos. Los marcos se utilizan a menudo para representar el conocimiento en sistemas de inteligencia artificial que deben comprender y modelar situaciones complejas.<br>Reglas de Producción: Las reglas de producción son un conjunto de reglas que describen cómo se deben tomar decisiones en base a ciertas condiciones. Las reglas de producción son a menudo utilizadas en sistemas expertos para representar el conocimiento.<br>Sistemas Basados en Casos: Los sistemas basados en casos representan el conocimiento en términos de casos y soluciones. Estos sistemas utilizan la información de casos anteriores para resolver problemas similares.<br>Redes Neuronales: Las redes neuronales son un tipo de modelo matemático que se basa en el funcionamiento de las neuronas en el cerebro. Estas redes se utilizan a menudo en la representación del conocimiento en sistemas de aprendizaje automático.<br>Lógica difusa: La lógica difusa es un tipo de lógica que permite la representación de incertidumbre y vaguedad en el conocimiento. Se utiliza a menudo en sistemas de control y toma de decisiones para representar el conocimiento y la incertidumbre asociada a las decisiones.",
+  ],
+
+  representacionIaOut: [
+    "Algunas formas de representación de conocimiento en IA incluyen la lógica, redes semánticas, marcos, reglas de producción, sistemas basados en casos, redes neuronales y lógica difusa. Estas formas permiten representar el conocimiento de manera estructurada y comprensible para los sistemas de inteligencia artificial.",
+    "La inteligencia artificial es la rama de la informática que se encarga de desarrollar sistemas que puedan realizar tareas que requieren inteligencia humana. La inteligencia artificial es una rama de la informática que se encarga de desarrollar sistemas que puedan realizar tareas que requieren inteligencia humana.",
   ],
   despedidaOut: [
     "chao",
@@ -138,6 +162,14 @@ function chatBot(message) {
     respIn: { input: entradas.respIn, output: salidas.respOut },
     quienIn: { input: entradas.quienIn, output: salidas.quienOut },
     chisteIn: { input: entradas.chisteIn, output: salidas.chisteOut },
+    representacionIaIn: {
+      input: entradas.representacionIaIn,
+      output: salidas.representacionIaOut,
+    },
+    expandirRepresentacionIaIn: {
+      input: entradas.expandirRepresentacionIaIn,
+      output: salidas.expandirRepresentacionIaOut,
+    },
     echarPerrosIn: {
       input: entradas.echarPerrosIn,
       output: salidas.echarPerrosOut,
