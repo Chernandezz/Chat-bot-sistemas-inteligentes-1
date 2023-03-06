@@ -49,6 +49,8 @@ section {
 body {
   background: url(https://images.unsplash.com/photo-1495808985667-ba4ce2ef31b3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
   background-size: cover;
+  height: 100vh;
+  overflow: hidden;
 }
 
 #chat {
@@ -91,6 +93,7 @@ body {
 }
 #chat .chat__conversation-board__message-container.reversed {
   flex-direction: row-reverse;
+  margin: 0 2rem 0 0;
 }
 #chat
   .chat__conversation-board__message-container.reversed
@@ -133,7 +136,7 @@ body {
   margin: 0 0.5em 0 0;
 }
 #chat .chat__conversation-board__message-container:not(:last-child) {
-  margin: 0 0 2em 0;
+  margin: 0 2rem 2rem 0;
 }
 #chat .chat__conversation-board__message__person {
   text-align: center;

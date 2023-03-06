@@ -79,6 +79,7 @@ let entradas = {
     "q te gusta hacer",
     "q te gusta hacer?",
   ],
+  
 };
 
 // Salidas
@@ -128,67 +129,36 @@ let salidas = {
 let checker = (arr, target) => target.every((v) => arr.includes(v));
 
 function chatBot(message) {
+  const keywords = {
+    saludoIn: { input: entradas.saludoIn, output: salidas.saludoOut },
+    nombreIn: { input: entradas.nombreIn, output: salidas.nombreOut },
+    materiaIn: { input: entradas.materiaIn, output: salidas.materiaOut },
+    despedidaIn: { input: entradas.despedidaIn, output: salidas.despedidaOut },
+    edadIn: { input: entradas.edadIn, output: salidas.edadOut },
+    respIn: { input: entradas.respIn, output: salidas.respOut },
+    quienIn: { input: entradas.quienIn, output: salidas.quienOut },
+    chisteIn: { input: entradas.chisteIn, output: salidas.chisteOut },
+    echarPerrosIn: {
+      input: entradas.echarPerrosIn,
+      output: salidas.echarPerrosOut,
+    },
+    estadoIn: { input: entradas.estadoIn, output: salidas.estadoOut },
+    preIn: { input: entradas.preIn, output: salidas.preOut },
+    cancelarIn: { input: entradas.cancelarIn, output: salidas.cancelarOut },
+    ocupaIn: { input: entradas.ocupaIn, output: salidas.ocupaOut },
+    skynetIn: { input: entradas.skynetIn, output: salidas.skynetOut },
+  };
+
   message = message.toLowerCase();
 
-  if (entradas.saludoIn.includes(message)) {
-    agregarMensajeBot(
-      salidas.saludoOut[Math.floor(Math.random() * salidas.saludoOut.length)]
-    );
-  } else if (entradas.nombreIn.includes(message)) {
-    agregarMensajeBot(
-      salidas.nombreOut[Math.floor(Math.random() * salidas.nombreOut.length)]
-    );
-  } else if (entradas.materiaIn.includes(message)) {
-    agregarMensajeBot(
-      salidas.materiaOut[Math.floor(Math.random() * salidas.materiaOut.length)]
-    );
-  } else if (entradas.despedidaIn.includes(message)) {
-    agregarMensajeBot(
-      salidas.despedidaOut[
-        Math.floor(Math.random() * salidas.despedidaOut.length)
-      ]
-    );
-  } else if (entradas.edadIn.includes(message)) {
-    agregarMensajeBot(
-      salidas.edadOut[Math.floor(Math.random() * salidas.edadOut.length)]
-    );
-  } else if (entradas.respIn.includes(message)) {
-    agregarMensajeBot(
-      salidas.respOut[Math.floor(Math.random() * salidas.respOut.length)]
-    );
-  } else if (entradas.quienIn.includes(message)) {
-    agregarMensajeBot(
-      salidas.quienOut[Math.floor(Math.random() * salidas.quienOut.length)]
-    );
-  } else if (entradas.chisteIn.includes(message)) {
-    agregarMensajeBot(
-      salidas.chisteOut[Math.floor(Math.random() * salidas.chisteOut.length)]
-    );
-  } else if (entradas.echarPerrosIn.includes(message)) {
-    agregarMensajeBot(
-      echarPerrosOut[Math.floor(Math.random() * salidas.echarPerrosOut.length)]
-    );
-  } else if (entradas.estadoIn.includes(message)) {
-    agregarMensajeBot(
-      salidas.estadoOut[Math.floor(Math.random() * salidas.estadoOut.length)]
-    );
-  } else if (entradas.preIn.includes(message)) {
-    agregarMensajeBot(
-      salidas.preOut[Math.floor(Math.random() * salidas.preOut.length)]
-    );
-  } else if (entradas.cancelarIn.includes(message)) {
-    agregarMensajeBot(
-      salidas.cancelarOut[
-        Math.floor(Math.random() * salidas.cancelarOut.length)
-      ]
-    );
-  } else if (entradas.ocupaIn.includes(message)) {
-    agregarMensajeBot(
-      salidas.ocupaOut[Math.floor(Math.random() * salidas.ocupaOut.length)]
-    );
-  } else if (entradas.skynetIn.includes(message)) {
-    agregarMensajeBot(
-      salidas.skynetOut[Math.floor(Math.random() * salidas.skynetOut.length)]
-    );
+  for (let keyword in keywords) {
+    if (keywords[keyword].input.includes(message)) {
+      agregarMensajeBot(
+        keywords[keyword].output[
+          Math.floor(Math.random() * keywords[keyword].output.length)
+        ]
+      );
+      return;
+    }
   }
 }
