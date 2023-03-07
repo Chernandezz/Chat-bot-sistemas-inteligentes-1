@@ -36,7 +36,7 @@ section {
 }
 
 .--dark-theme {
-  --chat-background: rgba(10, 14, 14, 0.95);
+  --chat-background: rgba(10, 14, 14, 0.85);
   --chat-panel-background: #131719;
   --chat-bubble-background: #14181a;
   --chat-bubble-active-background: #171a1b;
