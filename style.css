@@ -151,7 +151,6 @@ body {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  ms-user-select: none;
   position: relative;
 }
 #chat .chat__conversation-board__message__person__avatar::before {
@@ -301,11 +300,11 @@ body {
 
 @media only screen and (max-width: 600px) {
   #chat {
-    margin: 0;
-    border-radius: 0;
+    margin: 20px;
+    border-radius: 12px;
   }
   #chat .chat__conversation-board {
-    height: calc(100vh - 55px - 2em - 0.5em - 3em);
+    height: 80vh;
   }
   #chat .chat__conversation-board__message__options {
     display: none !important;
