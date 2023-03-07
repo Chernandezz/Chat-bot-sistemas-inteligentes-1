@@ -22,6 +22,13 @@ let entradas = {
     "continua",
     "mas?",
   ],
+  agradecimientoIn: [
+    "gracias",
+    "gracias!",
+    "gracias!",
+    "gracias!!",
+    "muchas gracias",
+  ],
   nombreIn: [
     "Cual es tu nombre",
     "cuál es tu nombre",
@@ -106,6 +113,12 @@ let salidas = {
     "Sistemas inteligentes computacionales, la mejor",
     "Inteligencia Artificial, la mejor",
   ],
+  agradecimientoOut: [
+    "De nada",
+    "De nada, es un placer ayudarte",
+    "De nada!",
+    "Con mucho gusto.",
+  ],
   expandirRepresentacionIaOut: [
     "Existen diversas formas de representación de conocimiento en IA, entre las que se incluyen:<br>Lógica: Es una forma de representación que utiliza reglas formales para representar el conocimiento y los hechos. La lógica proposicional y la lógica de primer orden son dos ejemplos de lógica utilizados en la representación de conocimiento en IA.<br>Redes Semánticas: Las redes semánticas son gráficos que representan el conocimiento en términos de objetos y relaciones entre ellos. Las redes semánticas son utilizadas a menudo en sistemas de procesamiento de lenguaje natural para representar el significado de las palabras.<br>Marcos: Los marcos son estructuras de datos que representan una situación o un concepto y sus atributos. Los marcos se utilizan a menudo para representar el conocimiento en sistemas de inteligencia artificial que deben comprender y modelar situaciones complejas.<br>Reglas de Producción: Las reglas de producción son un conjunto de reglas que describen cómo se deben tomar decisiones en base a ciertas condiciones. Las reglas de producción son a menudo utilizadas en sistemas expertos para representar el conocimiento.<br>Sistemas Basados en Casos: Los sistemas basados en casos representan el conocimiento en términos de casos y soluciones. Estos sistemas utilizan la información de casos anteriores para resolver problemas similares.<br>Redes Neuronales: Las redes neuronales son un tipo de modelo matemático que se basa en el funcionamiento de las neuronas en el cerebro. Estas redes se utilizan a menudo en la representación del conocimiento en sistemas de aprendizaje automático.<br>Lógica difusa: La lógica difusa es un tipo de lógica que permite la representación de incertidumbre y vaguedad en el conocimiento. Se utiliza a menudo en sistemas de control y toma de decisiones para representar el conocimiento y la incertidumbre asociada a las decisiones.",
   ],
@@ -162,6 +175,10 @@ function chatBot(message) {
     respIn: { input: entradas.respIn, output: salidas.respOut },
     quienIn: { input: entradas.quienIn, output: salidas.quienOut },
     chisteIn: { input: entradas.chisteIn, output: salidas.chisteOut },
+    agradecimientoIn: {
+      input: entradas.agradecimientoIn,
+      output: salidas.agradecimientoOut,
+    },
     representacionIaIn: {
       input: entradas.representacionIaIn,
       output: salidas.representacionIaOut,
