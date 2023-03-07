@@ -83,6 +83,7 @@ let entradas = {
     "formas de representación IA",
   ],
   saludoIn: ["hola", "holita", "hello", "hi", "que hubo?"],
+  ontologiaIn: ["que es la ontologia?", "que es la ontologia", "ontologia?"],
   estadoIn: [
     "como estas",
     "como estas?",
@@ -103,11 +104,20 @@ let entradas = {
     "q te gusta hacer",
     "q te gusta hacer?",
   ],
+  inferenciaIn: [
+    "que es la inferencia?",
+    "que es la inferencia",
+    "inferencia?",
+    "inferencia",
+  ],
 };
 
 // Salidas
 let salidas = {
-  nombreOut: ["Mi nombre es ChatBot y tu?", "Yo soy ChatBot y tu?"],
+  nombreOut: [
+    "Mi nombre es CRIS-TRON-X3000 y tu?",
+    "Yo soy CRIS-TRON-X3000 y tu?",
+  ],
   saludoOut: ["Hola, como estas?", "Que tal?", "Cómo estas?"],
   materiaOut: [
     "Sistemas inteligentes computacionales, la mejor",
@@ -119,6 +129,11 @@ let salidas = {
     "De nada!",
     "Con mucho gusto.",
   ],
+  ontologiaOut: [
+    'La ontología es una rama de la filosofía que se ocupa del estudio de la naturaleza de la realidad, la existencia y la estructura de las entidades que existen en el mundo. En otras palabras, la ontología se enfoca en la pregunta fundamental de "¿qué existe?" y en cómo se relacionan entre sí los distintos tipos de entidades existentes.',
+    "En el ámbito de la inteligencia artificial y la informática, la ontología se refiere a una descripción formal y explícita de conceptos y relaciones relevantes en una determinada área de conocimiento. En este contexto, una ontología se utiliza para crear un modelo de conocimiento compartido entre personas y sistemas informáticos, lo que permite una mejor comprensión y procesamiento de la información en una determinada área. Las ontologías se utilizan en aplicaciones como la gestión de contenido web, la minería de datos y la interoperabilidad de sistemas informáticos.",
+  ],
+
   expandirRepresentacionIaOut: [
     "Existen diversas formas de representación de conocimiento en IA, entre las que se incluyen:<br>Lógica: Es una forma de representación que utiliza reglas formales para representar el conocimiento y los hechos. La lógica proposicional y la lógica de primer orden son dos ejemplos de lógica utilizados en la representación de conocimiento en IA.<br>Redes Semánticas: Las redes semánticas son gráficos que representan el conocimiento en términos de objetos y relaciones entre ellos. Las redes semánticas son utilizadas a menudo en sistemas de procesamiento de lenguaje natural para representar el significado de las palabras.<br>Marcos: Los marcos son estructuras de datos que representan una situación o un concepto y sus atributos. Los marcos se utilizan a menudo para representar el conocimiento en sistemas de inteligencia artificial que deben comprender y modelar situaciones complejas.<br>Reglas de Producción: Las reglas de producción son un conjunto de reglas que describen cómo se deben tomar decisiones en base a ciertas condiciones. Las reglas de producción son a menudo utilizadas en sistemas expertos para representar el conocimiento.<br>Sistemas Basados en Casos: Los sistemas basados en casos representan el conocimiento en términos de casos y soluciones. Estos sistemas utilizan la información de casos anteriores para resolver problemas similares.<br>Redes Neuronales: Las redes neuronales son un tipo de modelo matemático que se basa en el funcionamiento de las neuronas en el cerebro. Estas redes se utilizan a menudo en la representación del conocimiento en sistemas de aprendizaje automático.<br>Lógica difusa: La lógica difusa es un tipo de lógica que permite la representación de incertidumbre y vaguedad en el conocimiento. Se utiliza a menudo en sistemas de control y toma de decisiones para representar el conocimiento y la incertidumbre asociada a las decisiones.",
   ],
@@ -142,6 +157,9 @@ let salidas = {
   preOut: [
     "si, vemos sistemas inteligentes juntos",
     "si, en inteligencia artificial",
+  ],
+  inferenciaOut: [
+    "La inferencia se refiere al proceso de llegar a una conclusión o deducción a partir de premisas o información previa. En el contexto de la lógica y la inteligencia artificial, la inferencia se utiliza para obtener nuevas conclusiones a partir de proposiciones conocidas.<br>En la lógica, la inferencia se realiza mediante el uso de reglas y principios bien definidos, y se puede utilizar para demostrar la validez o invalidez de un argumento.",
   ],
   cancelarOut: [
     "Mejor revisa tu citacion en el SIA",
@@ -171,10 +189,15 @@ function chatBot(message) {
     nombreIn: { input: entradas.nombreIn, output: salidas.nombreOut },
     materiaIn: { input: entradas.materiaIn, output: salidas.materiaOut },
     despedidaIn: { input: entradas.despedidaIn, output: salidas.despedidaOut },
+    ontologiaIn: { input: entradas.ontologiaIn, output: salidas.ontologiaOut },
     edadIn: { input: entradas.edadIn, output: salidas.edadOut },
     respIn: { input: entradas.respIn, output: salidas.respOut },
     quienIn: { input: entradas.quienIn, output: salidas.quienOut },
     chisteIn: { input: entradas.chisteIn, output: salidas.chisteOut },
+    inferenciaIn: {
+      input: entradas.inferenciaIn,
+      output: salidas.inferenciaOut,
+    },
     agradecimientoIn: {
       input: entradas.agradecimientoIn,
       output: salidas.agradecimientoOut,
