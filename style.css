@@ -300,11 +300,11 @@ body {
 
 @media only screen and (max-width: 600px) {
   #chat {
-    margin: 20px;
+    margin: 10px;
     border-radius: 12px;
   }
   #chat .chat__conversation-board {
-    height: 80vh;
+    height: 65vh;
   }
   #chat .chat__conversation-board__message__options {
     display: none !important;
